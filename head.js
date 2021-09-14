@@ -1,3 +1,4 @@
+/* eslint-disable space-before-function-paren */
 // head - retrieve index-0 of any array //
 
 // FUNCTION IMPLEMENTATION
