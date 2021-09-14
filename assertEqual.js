@@ -1,3 +1,4 @@
+/* eslint-disable space-before-function-paren */
 // assertEquals - err checking func //
 
 // FUNCTION IMPLEMENTATION
