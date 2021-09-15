@@ -1,3 +1,4 @@
+/* eslint-disable space-before-function-paren */
 /*
     - implement a function that can compare two arrays for a perfect match
 
