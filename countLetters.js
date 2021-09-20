@@ -5,14 +5,6 @@
 */
 
 // FUNCTION IMPLEMENTATION
-const assertEqual = function (actual, expected) {
-  if (actual !== expected) {
-    console.log(`Assertion Failed 🛑: [${actual}] !== [${expected}]`);
-  } else {
-    console.log(`Assertion Passed ✅: [${actual}] === [${expected}]`);
-  }
-};
-
 const countLetters = function (string) {
   // initialise container obj for counted chars
   const result = {};
@@ -27,8 +19,10 @@ const countLetters = function (string) {
   return result;
 };
 
-const output = countLetters('LHL');
+// const output = countLetters('LHL');
 
 //  test
-assertEqual(output['L'], 2);
-assertEqual(output['H'], 1);
+// assertEqual(output['L'], 2);
+// assertEqual(output['H'], 1);
+
+module.exports = countLetters;
