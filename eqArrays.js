@@ -3,15 +3,12 @@
     - implement a function that can compare two arrays for a perfect match
 
 */
-// FUNCTION IMPLEMENTATION
-const assertEqual = function (actual, expected) {
-  if (actual !== expected) {
-    console.log(`Assertion Failed 🛑: [${actual}] !== [${expected}]`);
-  } else {
-    console.log(`Assertion Passed ✅: [${actual}] === [${expected}]`);
-  }
-};
 
+// Import Module
+const assertEqual = require('./assertEqual');
+
+
+// FUNCTION IMPLEMENTATION
 const eqArrays = (a, b) => {
   if (a.length !== b.length) {
     return false;
@@ -25,8 +22,4 @@ const eqArrays = (a, b) => {
   }
 };
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false);
-
-assertEqual(eqArrays(['1', '2', '3'], ['1', '2', '3']), true);
-assertEqual(eqArrays(['1', '2', '3'], ['1', '2', 3]), false);
+module.exports = eqArrays;
