@@ -33,11 +33,11 @@ const takeUntil = function (array, callback) {
   // something to hold the new array values in
   // loop over array until reach an el that evaluates
   // callback condition to true
-  for (let item in array) {
-    if (callback(array[item])) {
-      console.log(array[item]);
+  for (let index in array) {
+    if (callback(array[index])) {
+      console.log(array[index]);
 
-      result = array.slice(0, item);
+      return array.slice(0, index);
     }
 
     // value of end position paramater for slice log
@@ -47,7 +47,6 @@ const takeUntil = function (array, callback) {
   // once true, return a slice of the array with elements from the beginning
   // slice logic, which pushes to container array
   // return
-  return result;
 };
 
 // test
