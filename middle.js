@@ -16,9 +16,6 @@
 */
 
 // Import Modules
-const eqArrays = require('./eqArrays');
-const assertArraysEqual = require('./assertArraysEqual');
-
 
 // Implement Function
 const middle = (array) => {

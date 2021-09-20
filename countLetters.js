@@ -5,7 +5,7 @@
 */
 
 // FUNCTION IMPLEMENTATION
-const countLetters = function (string) {
+const countLetters = function(string) {
   // initialise container obj for counted chars
   const result = {};
   // loop using for...of each char in string

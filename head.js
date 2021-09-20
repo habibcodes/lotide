@@ -3,9 +3,6 @@
 
 
 
-// Import Module
-const assertEqual = require('./assertEqual');
-
 // head func
 const head = (array) => {
   return array[0];

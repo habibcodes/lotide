@@ -1,18 +1,11 @@
 /*
   - Implement the definition for function eqObjects which will take in two objects and returns true or false, based on a perfect match.
 */
-
+const assertEqual = require('./assertEqual');
 // FUNCTION IMPLEMENTATION
-const assertEqual = function (actual, expected) {
-  if (actual !== expected) {
-    console.log(`Assertion Failed 🛑: [${actual}] !== [${expected}]`);
-  } else {
-    console.log(`Assertion Passed ✅: [${actual}] === [${expected}]`);
-  }
-};
 
 // Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
+// Otherwise you get back a false!
 const eqObjects = function (object1, object2) {
   // make sure there are at least two inputs
   if (!(object1 && object2)) {
@@ -40,16 +33,13 @@ const eqObjects = function (object1, object2) {
   const obj1Values = Object.values(object1);
   const obj2Values = Object.values(object2);
 
-  // !!! PROBLEM, CHECKS ORDE
+  
   for (let key of obj1Keys) {
     if (object1[key] !== object2[key]) {
       return false;
     }
   }
   return true;
-  // console.log(obj1Values);
-  // console.log(obj2Values);
-  // console.log(true);
 };
 
 // tests
@@ -72,3 +62,5 @@ The order of the array returned by Object.entries() is the same as that provided
 Object.values()
 The Object.values() method returns an array of a given object's own enumerable property values, in the same order as that provided by a for...in loop. (The only difference is that a for...in loop enumerates properties in the prototype chain as well.)
 */
+
+module.exports = eqObjects;
