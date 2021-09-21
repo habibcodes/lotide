@@ -1,12 +1,11 @@
 /*
   - Implement the definition for function eqObjects which will take in two objects and returns true or false, based on a perfect match.
 */
-const assertEqual = require('./assertEqual');
-// FUNCTION IMPLEMENTATION
 
+// FUNCTION IMPLEMENTATION
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a false!
-const eqObjects = function (object1, object2) {
+const eqObjects = function(object1, object2) {
   // make sure there are at least two inputs
   if (!(object1 && object2)) {
     return false;
@@ -42,15 +41,6 @@ const eqObjects = function (object1, object2) {
   return true;
 };
 
-// tests
-const ab = { a: '1', b: '2' };
-const ba = { b: '2', a: '1' };
-console.log(eqObjects(ab, ba));
-
-assertEqual(eqObjects(ab, ba), true);
-
-const abc = { a: '1', b: '2', c: '3' };
-assertEqual(eqObjects(abc), false);
 
 /*
 The Object.entries() method returns an array of a given object's own enumerable string-keyed property [key, value] pairs. This is the same as iterating with a for...in loop, except that a for...in loop enumerates properties in the prototype chain as well).

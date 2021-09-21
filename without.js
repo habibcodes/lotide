@@ -12,7 +12,7 @@ const without = (source, itemsToRemove) => {
     // if (!itemsToRemove.includes(source[i])) {
     //   newArr.push(source[i]);
     // }
-    !itemsToRemove.includes(source[i]) ? null : newArr.push(source[i]);
+    !itemsToRemove.includes(source[i]) ? newArr.push(source[i]) : null;
   }
   console.log(newArr);
   return newArr;
